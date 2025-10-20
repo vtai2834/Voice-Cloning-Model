@@ -1,0 +1,10 @@
+__pycache__/
+.ipynb_checkpoints/
+processed
+outputs
+checkpoints
+*.pyc
+*.bak
+*.ipynb
+*.zip
+venv
