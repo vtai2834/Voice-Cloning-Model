@@ -1,0 +1,15 @@
+1
+00:00:01,000 --> 00:00:03,000
+Hello! This is the first subtitle.
+
+2
+00:00:04,500 --> 00:00:07,000
+Today, we’ll learn how to create an SRT file.
+
+3
+00:00:07,500 --> 00:00:10,000
+Each section includes a number, time range, and text.
+
+4
+00:00:10,500 --> 00:00:13,000
+Simple, right?

@@ -1,0 +1,259 @@
+1
+00:00:00,000 --> 00:00:00,740  
+How's it going everyone?
+
+2
+00:00:00,740 --> 00:00:05,260  
+This is a free video from the coding interview course that I released earlier this year interview espresso.
+
+3
+00:00:05,260 --> 00:00:06,300  
+This one's about binary trees.
+
+4
+00:00:06,300 --> 00:00:07,279  
+I hope you enjoy it.
+
+5
+00:00:07,279 --> 00:00:10,919  
+And if you want to check out my course, there's a ton more videos like this one.
+
+6
+00:00:10,919 --> 00:00:13,540  
+Welcome to the next overview video.
+
+7
+00:00:13,540 --> 00:00:19,060  
+In this one, we're saying goodbye to the linked list and hello to the binary tree.
+
+8
+00:00:19,060 --> 00:00:23,740  
+We can think of a linked list as the shallow end of data structures when there's a whole
+
+9
+00:00:23,740 --> 00:00:24,560  
+Ocean out there.
+
+10
+00:00:24,560 --> 00:00:30,941  
+In fact, both the linked list and the binary tree are part of a family of node -based
+
+11
+00:00:30,941 --> 00:00:31,820  
+Data structures.
+
+12
+00:00:31,820 --> 00:00:38,420  
+By now, we're quite familiar with creating list nodes with a value property and setting their next pointer.
+
+13
+00:00:38,420 --> 00:00:43,740  
+You might be surprised to hear this, but a ton of data structures have these very same components.
+
+14
+00:00:43,740 --> 00:00:50,381  
+That is a node containing a value property and one or more pointers.
+
+15
+00:00:50,381 --> 00:00:56,060  
+So think of nodes as the bricks that we're using to build different quite literally structures.
+
+16
+00:00:56,060 --> 00:00:59,840  
+So within the broad category of node -based data structures,
+
+17
+00:00:59,840 --> 00:01:01,299  
+We have everything from graphs,
+
+18
+00:01:01,299 --> 00:01:03,719  
+With multiple pointers going from top to bottom.
+
+19
+00:01:03,719 --> 00:01:06,160  
+Most trees look more like a pyramid than a tree,
+
+20
+00:01:06,160 --> 00:01:09,240  
+But if you squint, you can see the tree if you flip it upside down.
+
+21
+00:01:09,240 --> 00:01:10,361  
+Let's get more precise.
+
+22
+00:01:10,361 --> 00:01:11,900  
+Trees expand in one direction,
+
+23
+00:01:11,900 --> 00:01:13,199  
+So that means no cycles.
+
+24
+00:01:13,199 --> 00:01:16,679  
+And the HTML on any page can be represented as a tree.
+
+25
+00:01:16,679 --> 00:01:21,659  
+And in fact, you can store anything in a tree with a hierarchical nature that is parents and
+
+26
+00:01:21,659 --> 00:01:24,479  
+The most interview algorithms associated with it.
+
+27
+00:01:24,479 --> 00:01:27,019  
+Now each type of tree has a specific set of rules.
+
+28
+00:01:27,019 --> 00:01:28,739  
+And the main rule for a binary tree
+
+29
+00:01:28,739 --> 00:01:30,998  
+With the properties left and right.
+
+30
+00:01:30,998 --> 00:01:33,998  
+That is to say, left and right pointers.
+
+31
+00:01:33,998 --> 00:01:37,918  
+Comparing this to the linked list where we have a single dimension,
+
+32
+00:01:37,918 --> 00:01:43,378  
+.nags.nags.nags, here we have 2 dimensions left and right.
+
+33
+00:01:43,378 --> 00:01:44,758  
+Went through to get here,
+
+34
+00:01:44,758 --> 00:01:46,198  
+Well, this is called a branch.
+
+35
+00:01:46,198 --> 00:01:52,339  
+So you might hear variations of following an entire branch, following a path to the end,
+
+36
+00:01:52,339 --> 00:01:55,399  
+Things like that when we talk about traversing through trees.
+
+37
+00:01:55,399 --> 00:01:59,859  
+More often than following one complete branch though, we'll want to look at every node in our tree,
+
+38
+00:01:59,859 --> 00:02:02,458  
+Whether we're searching for something modifying the values,
+
+39
+00:02:02,458 --> 00:02:05,698  
+Pulling them out or just doing any number of different things.
+
+40
+00:02:05,698 --> 00:02:07,218  
+So the important question becomes,
+
+41
+00:02:07,218 --> 00:02:09,237  
+What order do we look at our nodes in?
+
+42
+00:02:09,237 --> 00:02:10,698  
+The best answer is it depends.
+
+43
+00:02:10,698 --> 00:02:14,037  
+And this question is actually at the core of a lot of binary tree problems.
+
+44
+00:02:14,037 --> 00:02:19,636  
+So as you can imagine, if we're processing every node in the tree in some way, whether that's
+
+45
+00:02:19,636 --> 00:02:21,636  
+As simple as just printing out each node's value or something a bit more complex,
+
+46
+00:02:21,636 --> 00:02:24,776  
+As simple as just printing out each node's value or something a bit more complex, (có vẻ đoạn này hơi dài lặp — giữ nguyên nội dung)
+
+47
+00:02:24,776 --> 00:02:28,016  
+We're going to talk about in a few problems.
+
+48
+00:02:28,016 --> 00:02:33,675  
+This type of tree is a binary search tree.
+
+49
+00:02:33,675 --> 00:02:34,094  
+Note the binary search in binary search tree.
+
+50
+00:02:34,094 --> 00:02:35,934  
+The reason why it's called that is because like the binary search algorithm that uses a list or
+
+51
+00:02:35,934 --> 00:02:39,914  
+Now as far as what exactly balance means, well, we've got a whole video dedicated to that coming
+
+52
+00:02:39,914 --> 00:02:42,995  
+Up soon.
+
+53
+00:02:42,995 --> 00:02:46,216  
+Than its right child's value.
+
+54
+00:02:46,216 --> 00:02:49,557  
+So in this tree, three is more than one and less than five.
+
+55
+00:02:49,557 --> 00:02:54,557  
+So we can call this a valid binary search tree.
+
+56
+00:02:54,557 --> 00:02:56,237  
+Not only that simple rule, but this greater on the right,
+
+57
+00:02:56,237 --> 00:03:01,638  
+Less on the left principle has to be true for the entire tree.
+
+58
+00:03:01,638 --> 00:03:05,058  
+Let me explain. If I put a node with value two as five's left child,
+
+59
+00:03:05,058 --> 00:03:07,298  
+Our sub tree with five and two passes.
+
+60
+00:03:07,298 --> 00:03:12,637  
+But unfortunately, we are breaking it within the greater context of the tree because it's down our right
+
+61
+00:03:12,637 --> 00:03:14,436  
+And we have another whole video dedicated to that coming up soon.
+
+62
+00:03:14,436 --> 00:03:18,137  
+Now if we know we do have a valid BST,
+
+63
+00:03:18,137 --> 00:03:21,137  
+The way we find something is by simply traversing towards the value we want.
+
+64
+00:03:21,137 --> 00:03:24,837  
+But five has no right child.
+
+65
+00:03:24,837 --> 00:03:29,837  
+So we can safely say that eight is not in our tree.
